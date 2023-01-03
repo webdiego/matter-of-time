@@ -13,16 +13,20 @@ export default function Time({ selected }: Date | any) {
   }, [selected]);
 
   return (
-    <div>
-      <p>You have</p>
-      {Object.entries(age).map(([key, value], index) => {
-        return (
-          <p key={index}>
-            {new Intl.NumberFormat('it-IT').format(Math.abs(+value))}
-            {key}
-          </p>
-        );
-      })}
+    <div className="mx-auto max-w-xs mt-2">
+      <p className="font-bold wavy text-center text-lg">You have:</p>
+      <div className="flex overflow-x-auto mt-4">
+        {Object.entries(age).map(([key, value], index) => {
+          return (
+            <div key={index} className="w-44 p-5">
+              <p className="font-semibold">
+                {new Intl.NumberFormat('it-IT').format(Math.abs(+value))}
+              </p>
+              <p className="text-sm">{key}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

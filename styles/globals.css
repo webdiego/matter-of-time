@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wavy {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-position: under;
+  text-decoration-color: #d243cd;
+}

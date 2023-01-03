@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import Image from 'next/image';
 import DatePicker from '../components/DatePicker';
 
 export default function Home() {
@@ -12,9 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <p className="text-6xl font-bold">matter-of-time</p>
-        <p className="text-2xl font-bold">When did you born?</p>
+      <div className="max-w-sm mx-auto flex items-center flex-col pb-10">
+        <Image src={'/1.webp'} width={500} height={500} alt="logo" />
+        <p className="text-3xl font-bold ">matter-of-time</p>
+        <p className="text-lg">When did you born?🔮</p>
         <DatePicker />
       </div>
     </>

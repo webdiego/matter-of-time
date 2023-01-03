@@ -1,7 +1,7 @@
 .rdp {
   --rdp-cell-size: 40px;
-  --rdp-accent-color: #0000ff;
-  --rdp-background-color: #e7edff;
+  --rdp-accent-color: #d243cd;
+  --rdp-background-color: #e4e4e4;
   --rdp-accent-color-dark: #3003e1;
   --rdp-background-color-dark: #180270;
   --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
@@ -102,7 +102,7 @@
 .rdp-caption {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   text-align: left;
 }
@@ -130,7 +130,7 @@
   border: 0;
   border: 2px solid transparent;
   font-family: inherit;
-  font-size: 140%;
+  font-size: 120%;
   font-weight: bold;
 }
 
