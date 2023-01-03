@@ -12,11 +12,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-sm mx-auto flex items-center flex-col pb-10">
-        <Image src={'/1.webp'} width={500} height={500} alt="logo" />
-        <p className="text-3xl font-bold ">matter-of-time</p>
-        <p className="text-lg">When did you born?🔮</p>
-        <DatePicker />
+      <div className="max-w-sm md:max-w-7xl flex lg:flex-row mx-auto items-center justify-start flex-col pb-10 lg:pb-0 min-h-screen ">
+        <Image src={'/2.jpeg'} width={500} height={500} alt="logo" className="lg:w-1/2" />
+        <div className="flex items-center justify-center flex-col lg:w-1/2">
+          <p className="text-3xl font-bold ">matter-of-time</p>
+          <p className="text-lg">When did you born?🔮</p>
+          <DatePicker />
+        </div>
       </div>
     </>
   );

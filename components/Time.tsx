@@ -18,7 +18,7 @@ export default function Time({ selected }: Date | any) {
       <div className="flex overflow-x-auto mt-4">
         {Object.entries(age).map(([key, value], index) => {
           return (
-            <div key={index} className="w-44 p-5">
+            <div key={index} className="w-52 p-5">
               <p className="font-semibold">
                 {new Intl.NumberFormat('it-IT').format(Math.abs(+value))}
               </p>
