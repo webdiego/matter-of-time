@@ -7,15 +7,17 @@ import {
   differenceInMinutes,
   differenceInSeconds,
 } from 'date-fns';
+import { zonedTimeToUtc } from 'date-fns-tz';
 
 export default function getTimeObject(dateSelected: Date | any) {
+  const utcDate = zonedTimeToUtc(new Date(), Intl.DateTimeFormat().resolvedOptions().timeZone);
   return {
-    years: differenceInYears(dateSelected, new Date()),
-    months: differenceInMonths(dateSelected, new Date()),
-    weeks: differenceInCalendarISOWeeks(dateSelected, new Date()),
-    days: differenceInDays(dateSelected, new Date()),
-    hours: differenceInHours(dateSelected, new Date()),
-    minutes: differenceInMinutes(dateSelected, new Date()),
-    seconds: differenceInSeconds(dateSelected, new Date()),
+    years: differenceInYears(dateSelected, utcDate),
+    months: differenceInMonths(dateSelected, utcDate),
+    weeks: differenceInCalendarISOWeeks(dateSelected, utcDate),
+    days: differenceInDays(dateSelected, utcDate),
+    hours: differenceInHours(dateSelected, utcDate),
+    minutes: differenceInMinutes(dateSelected, utcDate),
+    seconds: differenceInSeconds(dateSelected, utcDate),
   };
 }

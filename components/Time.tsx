@@ -20,7 +20,7 @@ export default function Time({ selected }: Date | any) {
 
   return (
     <div className="mx-auto max-w-xs mt-2">
-      <div className="flex  justify-center text-center items-center text-lg">
+      <div className="flex justify-center text-center items-center text-lg">
         <p className="font-bold wavy text-center text-lg">You are:</p>
         <p className=" pl-2 text-focus-in">{message}</p>
       </div>
@@ -28,11 +28,14 @@ export default function Time({ selected }: Date | any) {
       <div className="flex overflow-x-auto mt-4">
         {Object.entries(time).map(([key, value], index) => {
           return (
-            <div key={index} className="w-52 p-5">
-              <p className="font-semibold">
-                {new Intl.NumberFormat('it-IT').format(Math.abs(+value))}
-              </p>
-              <p className="text-sm">{key}</p>
+            <div key={index} className="flex items-center justify-center w-52 pr-4">
+              <div className="p-5">
+                <p className="font-semibold">
+                  {new Intl.NumberFormat('it-IT').format(Math.abs(+value))}
+                </p>
+                <p className="text-sm">{key}</p>
+              </div>
+              <p className={`text-xs transform -rotate-12 wavy ${index === 6 && 'hidden '}`}>or</p>
             </div>
           );
         })}
